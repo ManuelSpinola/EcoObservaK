@@ -111,6 +111,38 @@
         "RemoteSha": "0.1-6"
       }
     },
+    "bsicons": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "description": {
+        "Package": "bsicons",
+        "Title": "Easily Work with 'Bootstrap' Icons",
+        "Version": "0.1.2",
+        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Mark\", \"Otto\", role = \"cph\",\n           comment = \"Bootstrap icons maintainer\")\n  )",
+        "Description": "Easily use 'Bootstrap' icons inside 'Shiny' apps and 'R\n    Markdown' documents. More generally, icons can be inserted in any\n    'htmltools' document through inline 'SVG'.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/bsicons",
+        "BugReports": "https://github.com/rstudio/bsicons/issues",
+        "Depends": "R (>= 2.10)",
+        "Imports": "cli, htmltools, rlang, utils",
+        "Suggests": "bslib, processx, testthat, webshot2, withr",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-11-03 23:29:00 UTC; cpsievert",
+        "Author": "Carson Sievert [cre, aut] (<https://orcid.org/0000-0002-4958-2844>),\n  Posit Software, PBC [cph, fnd],\n  Mark Otto [cph] (Bootstrap icons maintainer)",
+        "Maintainer": "Carson Sievert <carson@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-11-04 00:30:05 UTC",
+        "Built": "R 4.6.0; ; 2026-04-25 23:59:26 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "bsicons",
+        "RemoteRef": "bsicons",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteSha": "0.1.2"
+      }
+    },
     "bslib": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -1074,16 +1106,22 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "576d2477a996621db9c0a7c62ff1358c"
+      "checksum": "b773107b60c0525ddd567188cd182c7a"
     },
     "app.R": {
-      "checksum": "203db5211cf3a7a8120a764868c95ad7"
+      "checksum": "3e12807ecbf6839ac71fc2cb20cbd4a4"
+    },
+    "R/utils_display.R": {
+      "checksum": "d97fbfc14860dc32582c143fff8d57d9"
     },
     "renv.lock": {
-      "checksum": "3d2d24b9661ef8f08c1251b1ca2427c8"
+      "checksum": "2d8f8989a3cdabd05a56392db57c9c37"
     },
     "www/logo_maritza.png": {
       "checksum": "0c75fc3133ed6e436b48de3abb3882ba"
+    },
+    "www/logo01.png": {
+      "checksum": "f242f86de365fb8748a93efb7964d568"
     }
   },
   "users": null
