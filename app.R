@@ -213,6 +213,7 @@ server <- function(input, output, session) {
 
   observeEvent(input$goButton, {
     req(input$imagen, input$prompt)
+    withProgress(message = "Analizando imagen...", value = 0.3, {
     tryCatch({
       res <- kuzco::llm_image_classification(
         provider          = "google_gemini",
@@ -222,14 +223,16 @@ server <- function(input, output, session) {
         image             = input$imagen$datapath,
         language          = "Spanish"
       )
+      incProgress(0.7)
       results(res)
     }, error = function(e) {
       showNotification(
-        "El modelo está ocupado o hubo un error. Intentá de nuevo en unos segundos.",
+        paste0("Error: ", conditionMessage(e)),
         type     = "error",
         duration = 8
       )
     })
+    }) # withProgress
   })
 
   output$results_table <- gt::render_gt({
