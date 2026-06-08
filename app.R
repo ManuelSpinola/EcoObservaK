@@ -113,7 +113,7 @@ ui <- fluidPage(
   ")),
 
   # Banner
-  div(class = "banner-titulo", "EcoObservaK"),
+  div(class = "banner-titulo", "BioObserva"),
   div(class = "banner-subtitulo",
     "¿Qué hay en tu imagen? Análisis visual e identificación de especies con Kuzco"
   ),
