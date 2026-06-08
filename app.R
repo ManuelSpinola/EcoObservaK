@@ -162,7 +162,7 @@ ui <- fluidPage(
         textInput(
           inputId     = "prompt",
           label       = NULL,
-          placeholder = "Ej: ¿qué especie se ve en la imagen?",
+          placeholder = "Opcional: ¿qué especie se ve en la imagen?",
           width       = "100%"
         ),
 
@@ -212,14 +212,19 @@ server <- function(input, output, session) {
   results <- reactiveVal()
 
   observeEvent(input$goButton, {
-    req(input$imagen, input$prompt)
+    req(input$imagen)
+    prompt_efectivo <- if (nchar(trimws(input$prompt)) == 0) {
+      "Identifica las especies presentes en la imagen y describe la escena"
+    } else {
+      input$prompt
+    }
     withProgress(message = "Analizando imagen...", value = 0.3, {
     tryCatch({
       res <- kuzco::llm_image_classification(
         provider          = "google_gemini",
         llm_model         = "gemini-2.5-flash",
         backend           = "ellmer",
-        additional_prompt = input$prompt,
+        additional_prompt = prompt_efectivo,
         image             = input$imagen$datapath,
         language          = "Spanish"
       )
