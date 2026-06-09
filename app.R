@@ -96,15 +96,6 @@ ui <- fluidPage(
       border-color: #831828 !important;
     }
 
-    .footer-text {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      padding: 20px 40px;
-      border-top: 1px solid #E8C8C8;
-      margin-top: 20px;
-    }
-
     @media (max-width: 768px) {
       .banner-titulo { font-size: 1.1rem; padding: 12px 15px; }
       .col-sm-3, .col-sm-9 { width: 100% !important; }
@@ -185,12 +176,13 @@ ui <- fluidPage(
   ),
 
   # Footer
-  div(class = "footer-text",
-    HTML("© 2025 Observatorio de Vida Silvestre y Biodiversidad de Costa Rica, ICOMVIS-UNA.<br>"),
-    "App creada por ",
-    tags$a(href = "https://mspinola-sitioweb.netlify.app", "Manuel Spínola", target = "_blank"),
-    HTML("<br>Esta aplicación utiliza el paquete kuzco de R y Gemini 2.5 Flash (Google AI) como motor de lenguaje.<br>
-         Google no respalda ni administra esta aplicación.")
+  div(
+    style = paste0(
+      "background-color:#a31e32; color:#ffffff; ",
+      "text-align:center; padding:6px 12px; ",
+      "font-size:0.75rem; line-height:1.6;"
+    ),
+    "Manuel Spínola · ICOMVIS · Universidad Nacional · Costa Rica"
   )
 )
 
