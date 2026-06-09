@@ -1,7 +1,7 @@
 # ============================================================
 # app.R
-# EcoObservaK — Análisis visual e identificación de especies
-# Powered by kuzco + Google Gemini 2.5 Flash
+# BioObserva — Análisis visual e identificación de especies
+# Con la ayuda de Noctua, el búho observador
 # OVS-CR · ICOMVIS · UNA
 # ============================================================
 
@@ -106,7 +106,7 @@ ui <- fluidPage(
   # Banner
   div(class = "banner-titulo", "BioObserva"),
   div(class = "banner-subtitulo",
-    "¿Qué hay en tu imagen? Análisis visual e identificación de especies con Kuzco"
+    "¿Qué hay en tu imagen? Análisis visual e identificación de especies"
   ),
 
   fluidRow(
@@ -133,7 +133,9 @@ ui <- fluidPage(
 
         p(class = "descripcion-noctua",
           tags$strong("Noctua"), ", nuestro búho observador, utiliza inteligencia artificial ",
-          "para ayudarte a descubrir lo que hay en una imagen. Ideal para aprender, explorar ",
+          "para ayudarte a descubrir lo que hay en una imagen. No solo identifica las especies ",
+          "presentes, sino que también analiza toda la escena visual, detectando detalles relevantes ",
+          "que podrían pasar desapercibidos. Ideal para aprender, explorar ",
           "y maravillarse con la biodiversidad que nos rodea."
         ),
 
